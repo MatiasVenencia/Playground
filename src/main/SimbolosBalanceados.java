@@ -33,12 +33,15 @@ public class SimbolosBalanceados {
 	* @param args : los números a invertir.
 	*/
 	public static void main(String[] args) {
+		if (args.length != 1)
+			throw new IllegalArgumentException("Se espera un solo argumento");
+		String cadena = args[0];
 		Pila<Character> pilaEnteros = new PilaArregloFijo<>();
-		for (String argumento : args) {
+		for (int indiceChar = 0; indiceChar < cadena.length(); indiceChar++) {
+			char caracterActual = cadena.charAt(indiceChar);
 			/*TODO: completar:
-			* 1. Cada argumento debe ser una cadena de tamaño 1.
-			* 2. Debe corresponder a un caractér descripto por las constantes IPAREN, DPAREN, ICOR, DCOR, ILLAVE, o DLLAVE.
-			* 3. Hay libertad sobre que hacer si el caractér no es un símbolo definido por las constantes anteriores (ignorarlo o arrojar una excepción).
+			* 1. Debe corresponder a un caractér descripto por las constantes IPAREN, DPAREN, ICOR, DCOR, ILLAVE, o DLLAVE.
+			*    Hay libertad sobre que hacer si el caractér no es un símbolo definido por las constantes anteriores (ignorarlo o arrojar una excepción).
 			*/
 		
 		}
