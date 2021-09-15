@@ -36,7 +36,7 @@ public class SimbolosBalanceados {
 		if (args.length != 1)
 			throw new IllegalArgumentException("Se espera un solo argumento");
 		String cadena = args[0];
-		Pila<Character> pilaEnteros = new PilaArregloFijo<>();
+		Pila<Character> pilaCaracteres = new PilaArregloFijo<>();
 		for (int indiceChar = 0; indiceChar < cadena.length(); indiceChar++) {
 			char caracterActual = cadena.charAt(indiceChar);
 			/*TODO: completar:
