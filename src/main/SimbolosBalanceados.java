@@ -30,7 +30,7 @@ public class SimbolosBalanceados {
 	* 	<li>Al ejecutar <pre>java main.SimbolosBalanceados [()][()()]()</pre>, se debe imprimir {@code True}.</li>
 	* 	<li>Al ejecutar <pre>java main.SimbolosBalanceados [(])</pre>, se debe imprimir {@code False}.</li>
 	* </ul>
-	* @param args : los números a invertir.
+	* @param args : la cadena a verificar si está balanceada.
 	*/
 	public static void main(String[] args) {
 		if (args.length != 1)
