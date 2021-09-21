@@ -14,21 +14,22 @@ package datos;
 *   <li> equals		: Permite evaluar si otro racional es igual a este.</li>
 *   <li> compareTo	: Permite comparar este racional a otro para determinar la relación de orden.</li>
 * </ul>
+* @param Impl : el tipo que implementa Racional.
 * @version 1.1
 */
-public interface Racional extends Comparable<Racional> {
+public interface Racional<Impl extends Racional> extends Comparable<Impl> {
 
 	/**
 	* Suma otro racional a este, modificando este racional con el resultado.
 	* @param otro el racional a sumar
 	*/
-	public void sumar(Racional otro);
+	public void sumar(Impl otro);
 
 	/**
 	* Multiplica otro racional a este, modificando este racional con el resultado.
 	* @param otro el racional a multiplicar
 	*/
-	public void multiplicar(Racional otro);
+	public void multiplicar(Impl otro);
 
 	/**
 	* Niega este racional, equivalente a multiplicar por {@code -1}, modificando este racional con el resultado.
@@ -39,7 +40,7 @@ public interface Racional extends Comparable<Racional> {
 	* Divide este racional por otro, modificando este racional con el resultado.
 	* @param otro el racional por el cual dividir a este
 	*/
-	public void dividir(Racional otro);
+	public void dividir(Impl otro);
 
 	/**
 	* El invariante de represantacion
@@ -50,10 +51,14 @@ public interface Racional extends Comparable<Racional> {
 	@Override
 	public String toString();
 	
+	/**
+	* Compara este elemento con otro del mismo tipo.
+	* Es decir, comparar distintas implementaciones de {@code Racional} retorna {@code false}.
+	*/
 	@Override
 	public boolean equals(Object otro);
 	
 	@Override
-	public int compareTo(Racional otro);
+	public int compareTo(Impl otro);
 
 }
